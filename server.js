@@ -1,31 +1,27 @@
-console.log("Hello");
-//console.log(global);
+console.log("hello worldn");
+//console.log(global); 
+//Core modules 
+const os = require('os')
+const path = require('path')
 
-const os = require('os');
-const path = require('path');
-
-
-/*console.log(os.type());
-console.log(os.version());
-console.log(os.homedir());
-
-console.log(__dirname);
-console.log(__filename);
-
-console.log(path.dirname(__filename));
-console.log(path.basename(__filename));
-console.log(path.extname(__filename));
-
-console.log(path.parse(__filename));*/ //returns an object of the file path
-
-
+//import your own module 
 //you can import it as a whole and then access each function individually with the objectct syntax
-//const math = require('./math')
-//math.add(2,5)
+const math = require('./math')
+//const {multiply} = require('.math) //alternatively you can destructure the function you want
 
-const {add, multiply, divide} = require('./math');
+console.log(os.type());
+console.log(os.homedir());
+console.log(os.version());
 
-console.log(add(2, 3));
-console.log(multiply(2, 3));
-console.log(divide(4, 2));
+console.log(__dirname)
+console.log("this is the file name: " + __filename)
+
+console.log(path.dirname(__filename))
+console.log(path.basename(__filename))
+console.log(path.extname(__filename))
+console.log(path.extname(__filename))
+console.log(path.parse(__filename)); //returns an object of the file path
+
+
+console.log(math.add(2,5))
 
